@@ -52,4 +52,17 @@ export const projects: Project[] = [
     imageAlt:
       "ClosetCast today's outfit recommendation with dress, sneakers, and baseball cap selections",
   },
+  {
+    id: "fairwaycast",
+    title: "FairwayCast",
+    description:
+      "A golf course weather advisor that turns forecasts into a clear should-I-play recommendation.",
+    category: "Sports / Utility",
+    url: "https://bears4life-utsf.github.io/FairwayCast/",
+    status: "live",
+    accent: "#2f6b4f",
+    image: "/images/projects/fairwaycast.jpg",
+    imageAlt:
+      "FairwayCast golf course weather advisor with should-I-play recommendation and forecast panels",
+  },
 ];
