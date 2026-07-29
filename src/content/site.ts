@@ -8,7 +8,6 @@ export const site = {
   nav: [
     { label: "Tradeoffs", href: "/#tradeoffs" },
     { label: "Writing", href: "/writing" },
-    { label: "Projects", href: "/#projects" },
     { label: "About", href: "/#about" },
   ],
   hero: {
@@ -39,7 +38,7 @@ export const site = {
         },
         {
           label: "How should humans and AI collaborate?",
-          href: "/#projects",
+          href: "/projects",
         },
         {
           label: "Why do some products succeed?",
@@ -56,6 +55,10 @@ export const site = {
       "Thoughts on product leadership, organizational systems, artificial intelligence, and the tradeoffs behind building great software.",
   },
   projects: {
+    eyebrow: "Building",
+    headline: "Experiments & side projects",
+    intro:
+      "Building is how I test ideas. Every project is an experiment in understanding how software, AI, and product thinking intersect.",
     aside:
       "Side projects that keep curiosity honest about what is easy in theory and hard in practice.",
   },
