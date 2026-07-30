@@ -32,7 +32,7 @@ export const projects: Project[] = [
     description:
       "A Pokémon companion app for searching, exploring matchups, and learning type effectiveness.",
     category: "Gaming / Side Project",
-    url: "https://bears4life-utsf.github.io/pokescout/",
+    url: "https://bears4life-utsf.github.io/PokeScout/",
     status: "live",
     accent: "#b08d3e",
     image: "/images/projects/pokescout.jpg",
