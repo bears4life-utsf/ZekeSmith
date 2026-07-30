@@ -117,6 +117,7 @@ export function Hero() {
               <ul className="mt-5 space-y-1">
                 {site.hero.exploring.items.map((item) => {
                   const hashHref = hashFromHref(item.href);
+                  const isExternal = item.href.startsWith("http");
                   return (
                     <li key={item.href}>
                       <a
@@ -124,6 +125,8 @@ export function Hero() {
                         data-active={
                           hashHref ? activeHref === hashHref : undefined
                         }
+                        rel={isExternal ? "noopener noreferrer" : undefined}
+                        target={isExternal ? "_blank" : undefined}
                         /* Default ~AA body contrast; active adds accent + wash (not color-only). */
                         className="exploring-item block rounded-md px-2 py-1.5 text-sm leading-snug text-foreground/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                       >

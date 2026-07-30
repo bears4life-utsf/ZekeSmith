@@ -5,6 +5,10 @@ export const site = {
     "After nearly three decades leading software teams, Zeke S. Smith explores the tradeoffs that shape products — and the systems, curiosity, and craft behind building software in an AI era.",
   url: "https://zekesmith.dev",
   email: "hello@zekesmith.com",
+  bigSandLabs: {
+    name: "Big Sand Labs",
+    url: "https://www.bigsandlabs.com",
+  },
   nav: [
     { label: "Tradeoffs", href: "/#tradeoffs" },
     { label: "Writing", href: "/writing" },
@@ -37,8 +41,8 @@ export const site = {
           href: "/writing/the-product-operating-model-actually-works",
         },
         {
-          label: "How should humans and AI collaborate?",
-          href: "/projects",
+          label: "Where does curiosity become software?",
+          href: "https://www.bigsandlabs.com",
         },
         {
           label: "Why do some products succeed?",
@@ -71,15 +75,12 @@ export const site = {
       "I still build because curiosity is how I learn. Small experiments keep me honest about what is easy in theory and hard in practice. Writing helps me pressure-test the ideas that keep returning: systems, incentives, craft, and judgment.",
       "What fascinates me now is how AI is changing the economics of building products — not by removing tradeoffs, but by rearranging them.",
     ],
-    interests: [
-      "Product systems and tradeoffs",
-      "AI-assisted software development",
-      "Product operating models",
-      "Modern UX and software craft",
-      "Investing and markets",
-      "Golf",
-      "Music and guitar",
-      "Building small software products",
-    ],
+    buildingOutside: {
+      eyebrow: "Building outside of work",
+      lead: "Leading software teams is my profession. Building software is how I continue learning.",
+      supporting:
+        "Big Sand Labs is home to the experiments, tools, and products that grow out of that curiosity.",
+      ctaLabel: "Explore Big Sand Labs",
+    },
   },
 } as const;
