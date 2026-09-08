@@ -240,7 +240,7 @@ export const PRESETS: Preset[] = [
     blurb:
       "Growing teams, products, and dependencies while maintaining speed, alignment, and effective decision-making.",
     explanation:
-      "As organizations grow, capacity and surface area expand together. The tradeoff is that coordination and decision latency often become the real constraint—speed and alignment compete unless ownership stays clear.",
+      "Growth adds capacity and surface area at the same time. The leadership problem is that coordination and decision latency often become the real constraint—speed and alignment compete unless ownership stays clear.",
     guidance: {
       lens: "Scaling rarely fails from too few people. It fails when growth outruns clear ownership and decision rights.",
       benefits: [
@@ -274,7 +274,7 @@ export const PRESETS: Preset[] = [
     blurb:
       "Aligning multiple teams, shared platforms, and complex dependencies without slowing execution.",
     explanation:
-      "Aligning many teams and shared platforms improves predictability. The tradeoff is that planning and governance can slow local decision-making and execution—coordination becomes valuable until it costs more than it returns.",
+      "Shared platforms and dependent teams need alignment to stay predictable. The leadership problem is knowing when planning and governance still reduce risk—and when they start costing more than they return.",
     guidance: {
       lens: "Enterprise coordination pays for itself only while it reduces risk faster than it slows local decisions.",
       benefits: [
@@ -659,36 +659,47 @@ function topItems(items: WeightedItem[], limit: number): string[] {
 /**
  * Qualitative reflection for the current configuration.
  * Numbers stay under the hood; leaders see tensions, not scores.
- * When inputs match a leadership challenge, challenge-specific guidance
- * is merged in so recommendations feel tailored—not slider-generic only.
+ *
+ * Pass `challengeId` when a leadership challenge is selected so guidance
+ * stays challenge-aware while leaders explore the sliders. Exact input
+ * matches weight challenge copy more heavily; diverged exploration still
+ * keeps the challenge lens, question, and a lighter guidance blend.
  */
 export function getReflection(
   inputs: SliderInputs,
   outputs: EngineOutputs,
+  challengeId?: PresetId | null,
 ): Reflection {
   const { scope, deliverySpeed, qualityBar, teamSize, innovation } = inputs;
   const matchedPresetId = matchPreset(inputs);
-  const matchedPreset = matchedPresetId
-    ? getPresetById(matchedPresetId)
+  const activeChallengeId = challengeId ?? matchedPresetId;
+  const activeChallenge = activeChallengeId
+    ? getPresetById(activeChallengeId)
     : undefined;
+  const exactChallengeMatch =
+    matchedPresetId != null && matchedPresetId === activeChallengeId;
 
   const benefits: WeightedItem[] = [];
   const costs: WeightedItem[] = [];
   const effects: WeightedItem[] = [];
   const questions: WeightedItem[] = [];
 
-  if (matchedPreset) {
-    const { guidance } = matchedPreset;
+  if (activeChallenge) {
+    const { guidance } = activeChallenge;
+    const itemWeight = exactChallengeMatch ? 108 : 72;
     for (const text of guidance.benefits) {
-      benefits.push({ weight: 108, text });
+      benefits.push({ weight: itemWeight, text });
     }
     for (const text of guidance.costs) {
-      costs.push({ weight: 108, text });
+      costs.push({ weight: itemWeight, text });
     }
     for (const text of guidance.organizationalEffects) {
-      effects.push({ weight: 108, text });
+      effects.push({ weight: itemWeight, text });
     }
-    questions.push({ weight: 120, text: guidance.question });
+    questions.push({
+      weight: exactChallengeMatch ? 120 : 105,
+      text: guidance.question,
+    });
   }
 
   if (deliverySpeed > 60) {
@@ -912,10 +923,10 @@ export function getReflection(
     costs: topItems(costs, 4),
     organizationalEffects: topItems(effects, 3),
     question: topItems(questions, 1)[0],
-    ...(matchedPreset
+    ...(activeChallenge
       ? {
-          challengeLabel: matchedPreset.label,
-          challengeLens: matchedPreset.guidance.lens,
+          challengeLabel: activeChallenge.label,
+          challengeLens: activeChallenge.guidance.lens,
         }
       : {}),
   };
