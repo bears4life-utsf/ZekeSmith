@@ -28,11 +28,11 @@ export function Hero() {
       <div className="hero-atmosphere absolute inset-0 -z-20" aria-hidden="true" />
       <div className="hero-grid absolute inset-0 -z-10" aria-hidden="true" />
 
-      <div className="mx-auto flex min-h-[100svh] w-full max-w-6xl items-center px-5 pb-28 pt-32 sm:px-8 lg:pb-32 lg:pt-28">
+      <div className="mx-auto flex min-h-[100svh] w-full max-w-6xl items-center px-5 pb-24 pt-36 sm:px-8 sm:pb-28 sm:pt-40">
         <div className="max-w-2xl">
           <motion.p
             {...fadeUp(0)}
-            className="font-serif text-4xl tracking-tight text-foreground sm:text-5xl"
+            className="font-sans text-4xl font-semibold tracking-tight text-foreground sm:text-5xl"
           >
             {site.name}
           </motion.p>

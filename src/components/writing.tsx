@@ -12,7 +12,7 @@ export function Writing() {
     <section
       id="writing"
       aria-labelledby="writing-heading"
-      className="scroll-mt-24 border-t border-border"
+      className="scroll-mt-28 border-t border-border"
     >
       <div className="mx-auto w-full max-w-6xl px-5 py-24 sm:px-8 sm:py-28">
         <motion.div

@@ -12,7 +12,7 @@ export function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="scroll-mt-24 border-t border-border"
+      className="scroll-mt-28 border-t border-border"
     >
       <div className="mx-auto w-full max-w-6xl px-5 py-24 sm:px-8 sm:py-28">
         <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
@@ -51,7 +51,7 @@ export function About() {
             whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.45, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
-            className="rounded-3xl border border-border bg-background-elevated p-7 shadow-soft sm:p-8"
+            className="rounded-2xl border border-border bg-background-elevated p-7 shadow-soft sm:p-8"
           >
             <h3 className="text-sm font-medium uppercase tracking-[0.18em] text-accent">
               Current interests
