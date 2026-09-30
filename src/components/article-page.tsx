@@ -6,7 +6,13 @@ import { RelatedEssays } from "@/components/continue-exploring";
 const SHARED_PLACEHOLDER =
   "This essay is currently being developed. It will explore the leadership decisions, organizational consequences, and practical tradeoffs behind this idea.";
 
-export function ArticlePage({ article }: { article: Article }) {
+export function ArticlePage({
+  article,
+  paragraphs,
+}: {
+  article: Article;
+  paragraphs?: string[] | null;
+}) {
   return (
     <article className="mx-auto w-full max-w-6xl px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-32">
       <div className="mx-auto max-w-2xl">
@@ -24,8 +30,16 @@ export function ArticlePage({ article }: { article: Article }) {
         </div>
 
         <div className="mt-12 space-y-5 border-t border-border pt-10 text-base leading-[1.75] text-foreground/90">
-          <p>{SHARED_PLACEHOLDER}</p>
-          <p className="text-muted">{article.placeholderNote}</p>
+          {paragraphs && paragraphs.length > 0 ? (
+            paragraphs.map((paragraph, index) => (
+              <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
+            ))
+          ) : (
+            <>
+              <p>{SHARED_PLACEHOLDER}</p>
+              <p className="text-muted">{article.placeholderNote}</p>
+            </>
+          )}
         </div>
 
         <p className="mt-10 text-sm text-muted">

@@ -4,6 +4,7 @@ import { ArticlePage } from "@/components/article-page";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { articles, getArticleBySlug } from "@/content/articles";
+import { getEssayParagraphs } from "@/lib/essay";
 
 type WritingArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -39,7 +40,10 @@ export default async function WritingArticleRoute({
     <>
       <Header />
       <main id="main">
-        <ArticlePage article={article} />
+        <ArticlePage
+          article={article}
+          paragraphs={getEssayParagraphs(article.slug)}
+        />
       </main>
       <Footer />
     </>

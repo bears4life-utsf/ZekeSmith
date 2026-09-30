@@ -26,9 +26,9 @@ export const articles: Article[] = [
     title: "The Art of Explaining Tradeoffs",
     category: "Leadership Communication",
     description:
-      "Leadership is not choosing the perfect answer. It is helping people understand why every meaningful decision costs something.",
-    readingTime: "8 min",
-    status: "draft",
+      "Leadership isn’t about finding the perfect answer. It’s about making the tradeoffs clear.",
+    readingTime: "12 min",
+    status: "published",
     featured: true,
     relatedEssaySlugs: [
       "the-iron-triangle-still-wins",
