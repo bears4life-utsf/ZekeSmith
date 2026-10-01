@@ -22,21 +22,38 @@ export type ContinueExploringItem = {
 /** Essays that extend the Tradeoff Model and Writing library. */
 export const articles: Article[] = [
   {
-    slug: "the-art-of-explaining-tradeoffs",
-    title: "The Art of Explaining Tradeoffs",
-    category: "Leadership Communication",
+    slug: "the-iron-triangle-still-wins",
+    title: "The Iron Triangle Still Wins",
+    category: "Leadership Foundations",
     description:
-      "Leadership isn’t about finding the perfect answer. It’s about making the tradeoffs clear.",
-    readingTime: "12 min",
-    status: "published",
+      "Why software leaders never escape the tradeoff between scope, speed, and quality.",
+    readingTime: "7 min",
+    status: "draft",
     featured: true,
     relatedEssaySlugs: [
-      "the-iron-triangle-still-wins",
+      "the-art-of-explaining-tradeoffs",
       "why-more-people-often-slow-delivery",
       "ai-doesnt-eliminate-tradeoffs",
     ],
     placeholderNote:
-      "It will look closely at how leaders frame constraints, make costs visible, and build support without pretending the hard parts disappear.",
+      "It will return to the durable relationship between scope, speed, and quality — and why new methods rarely dissolve that triangle.",
+  },
+  {
+    slug: "why-more-people-often-slow-delivery",
+    title: "Why More People Often Slow Delivery",
+    category: "Organizational Design",
+    description:
+      "A practical explanation of Brooks’s Law for modern software organizations.",
+    readingTime: "7 min",
+    status: "draft",
+    featured: false,
+    relatedEssaySlugs: [
+      "when-safe-stops-scaling",
+      "the-iron-triangle-still-wins",
+      "the-product-operating-model-actually-works",
+    ],
+    placeholderNote:
+      "It will show how added people can increase coordination cost faster than they increase delivery capacity — especially under unclear ownership.",
   },
   {
     slug: "when-safe-stops-scaling",
@@ -73,38 +90,89 @@ export const articles: Article[] = [
       "It will focus on what changes when teams own outcomes end to end — and what leadership has to give up for that ownership to be real.",
   },
   {
-    slug: "the-iron-triangle-still-wins",
-    title: "The Iron Triangle Still Wins",
-    category: "Leadership Foundations",
+    slug: "the-art-of-explaining-tradeoffs",
+    title: "The Art of Explaining Tradeoffs",
+    category: "Leadership Communication",
     description:
-      "Why software leaders never escape the tradeoff between scope, speed, and quality.",
-    readingTime: "7 min",
-    status: "draft",
+      "Leadership isn’t about finding the perfect answer. It’s about making the tradeoffs clear.",
+    readingTime: "12 min",
+    status: "published",
     featured: false,
     relatedEssaySlugs: [
-      "the-art-of-explaining-tradeoffs",
+      "the-iron-triangle-still-wins",
       "why-more-people-often-slow-delivery",
       "ai-doesnt-eliminate-tradeoffs",
     ],
     placeholderNote:
-      "It will return to the durable relationship between scope, speed, and quality — and why new methods rarely dissolve that triangle.",
+      "It will look closely at how leaders frame constraints, make costs visible, and build support without pretending the hard parts disappear.",
   },
   {
-    slug: "why-more-people-often-slow-delivery",
-    title: "Why More People Often Slow Delivery",
-    category: "Organizational Design",
+    slug: "when-building-gets-cheap-choosing-gets-expensive",
+    title: "When Building Gets Cheap, Choosing Gets Expensive",
+    category: "AI Leadership",
     description:
-      "A practical explanation of Brooks’s Law for modern software organizations.",
+      "AI lowers the cost of producing software, making product judgment more valuable.",
+    readingTime: "8 min",
+    status: "draft",
+    featured: false,
+    relatedEssaySlugs: [
+      "more-code-is-not-more-progress",
+      "the-product-manager-after-the-factory",
+      "ai-doesnt-eliminate-tradeoffs",
+    ],
+    placeholderNote:
+      "It will look at what happens to product judgment when producing software is no longer the expensive part of the work.",
+  },
+  {
+    slug: "more-code-is-not-more-progress",
+    title: "More Code Is Not More Progress",
+    category: "AI Leadership",
+    description:
+      "AI can dramatically increase software output without necessarily increasing customer or business value.",
     readingTime: "7 min",
     status: "draft",
     featured: false,
     relatedEssaySlugs: [
-      "when-safe-stops-scaling",
-      "the-iron-triangle-still-wins",
-      "the-product-operating-model-actually-works",
+      "when-building-gets-cheap-choosing-gets-expensive",
+      "what-should-humans-still-decide",
+      "ai-doesnt-eliminate-tradeoffs",
     ],
     placeholderNote:
-      "It will show how added people can increase coordination cost faster than they increase delivery capacity — especially under unclear ownership.",
+      "It will separate output from progress — and why a faster factory can still move a product in the wrong direction.",
+  },
+  {
+    slug: "the-product-manager-after-the-factory",
+    title: "The Product Manager After the Factory",
+    category: "AI Leadership",
+    description:
+      "When feature production becomes abundant, the role of product management moves upstream toward judgment, discovery, and deciding what matters.",
+    readingTime: "9 min",
+    status: "draft",
+    featured: false,
+    relatedEssaySlugs: [
+      "the-product-operating-model-actually-works",
+      "what-should-humans-still-decide",
+      "when-building-gets-cheap-choosing-gets-expensive",
+    ],
+    placeholderNote:
+      "It will trace how product management shifts when feature production is no longer the scarce skill.",
+  },
+  {
+    slug: "what-should-humans-still-decide",
+    title: "What Should Humans Still Decide?",
+    category: "AI Leadership",
+    description:
+      "As AI takes on more work, leaders must decide which decisions still require human judgment, accountability, and ownership.",
+    readingTime: "8 min",
+    status: "draft",
+    featured: false,
+    relatedEssaySlugs: [
+      "the-art-of-explaining-tradeoffs",
+      "the-product-manager-after-the-factory",
+      "ai-doesnt-eliminate-tradeoffs",
+    ],
+    placeholderNote:
+      "It will ask which decisions stay with people — the ones that still need judgment, accountability, and ownership.",
   },
   {
     slug: "ai-doesnt-eliminate-tradeoffs",

@@ -3,7 +3,7 @@ import type { ReactNode, SVGProps } from "react";
 /**
  * Shared monochrome illustration language for Writing essays.
  * Editorial / diagrammatic — not decorative. Stroke weight and geometry
- * are locked so all six read as one family.
+ * are locked so the set reads as one family.
  *
  * Benchmarks for the set: Iron Triangle (simplicity) and Brooks’s Law
  * (comparison clarity). Every diagram should teach the insight if the
@@ -605,6 +605,256 @@ export function AiDoesntEliminateTradeoffsIllustration(
   );
 }
 
+/**
+ * 7 — Building fans out cheaply; choosing collapses into one costly decision.
+ * Insight: output multiplies from a short step; judgment stays singular.
+ */
+export function BuildingGetsCheapIllustration(props: IllustrationProps) {
+  const source = { x: 36, y: 80 };
+  const step = { x: 58, y: 80 };
+  const outputs = [
+    { x: 88, y: 46 },
+    { x: 88, y: 80 },
+    { x: 88, y: 114 },
+  ];
+  const options = [
+    { x: 136, y: 42 },
+    { x: 136, y: 68 },
+    { x: 136, y: 94 },
+    { x: 136, y: 120 },
+  ];
+  const choice = { x: 196, y: 80 };
+
+  return (
+    <IllustrationShell
+      title="Building multiplies cheaply; choosing stays expensive"
+      {...props}
+    >
+      <line x1={source.x} y1={source.y} x2={step.x} y2={step.y} />
+      {outputs.map((output) => (
+        <line
+          key={`out-${output.y}`}
+          x1={step.x}
+          y1={step.y}
+          x2={output.x}
+          y2={output.y}
+          strokeWidth={SWQ}
+        />
+      ))}
+      <Node cx={source.x} cy={source.y} />
+      <Node cx={step.x} cy={step.y} />
+      {outputs.map((output) => (
+        <rect
+          key={`box-${output.y}`}
+          x={output.x - RH}
+          y={output.y - RH}
+          width={RH * 2}
+          height={RH * 2}
+          rx={R}
+          fill="var(--background)"
+        />
+      ))}
+
+      <ComparisonDivider />
+
+      {options.map((option) => (
+        <line
+          key={`opt-${option.y}`}
+          x1={option.x}
+          y1={option.y}
+          x2={choice.x}
+          y2={choice.y}
+          strokeWidth={SWQ}
+        />
+      ))}
+      {options.map((option) => (
+        <Node key={`on-${option.y}`} cx={option.x} cy={option.y} r={NRD} />
+      ))}
+      <Node cx={choice.x} cy={choice.y} r={NRF} filled />
+
+      <DiagramLabel x={62} y={LBASE}>
+        Build
+      </DiagramLabel>
+      <DiagramLabel x={choice.x} y={LBASE}>
+        Choose
+      </DiagramLabel>
+    </IllustrationShell>
+  );
+}
+
+/**
+ * 8 — A tall stack of output never reaches the goal a short path does.
+ * Insight: volume is not arrival.
+ */
+export function MoreCodeIsNotProgressIllustration(props: IllustrationProps) {
+  const stackCount = 6;
+  const stackH = 9;
+  const stackGap = 3.5;
+  const stackBottom = 124;
+  const stackX = 44;
+  const stackW = 32;
+  const goalY = 34;
+
+  const path = [
+    { x: 148, y: 118 },
+    { x: 172, y: 76 },
+    { x: 200, y: goalY },
+  ];
+
+  return (
+    <IllustrationShell
+      title="A pile of output that never arrives, beside a path that does"
+      {...props}
+    >
+      <line
+        x1={40}
+        y1={goalY}
+        x2={86}
+        y2={goalY}
+        opacity={QUIET}
+        strokeWidth={SWQ}
+        strokeDasharray="2 3"
+      />
+      {Array.from({ length: stackCount }, (_, index) => {
+        const y = stackBottom - index * (stackH + stackGap) - stackH;
+        return (
+          <rect
+            key={`stack-${index}`}
+            x={stackX}
+            y={y}
+            width={stackW}
+            height={stackH}
+            rx={R}
+            fill="var(--background)"
+          />
+        );
+      })}
+
+      <ComparisonDivider />
+
+      <line
+        x1={140}
+        y1={goalY}
+        x2={214}
+        y2={goalY}
+        opacity={MUTED}
+        strokeWidth={SWQ}
+      />
+      <line x1={path[0].x} y1={path[0].y} x2={path[1].x} y2={path[1].y} />
+      <line x1={path[1].x} y1={path[1].y} x2={path[2].x} y2={path[2].y} />
+      <Node cx={path[0].x} cy={path[0].y} />
+      <Node cx={path[1].x} cy={path[1].y} />
+      <Node cx={path[2].x} cy={path[2].y} r={NRF} filled />
+    </IllustrationShell>
+  );
+}
+
+/**
+ * 9 — Judgment and discovery sit upstream of an abundant feature factory.
+ * Insight: the distinct work happens before identical output.
+ */
+export function ProductManagerAfterFactoryIllustration(props: IllustrationProps) {
+  const judgment = { x: 40, y: 80 };
+  const discovery = [
+    { x: 78, y: 48 },
+    { x: 78, y: 112 },
+  ];
+  const factory = [
+    { x: 148, y: 52 },
+    { x: 176, y: 52 },
+    { x: 204, y: 52 },
+    { x: 148, y: 108 },
+    { x: 176, y: 108 },
+    { x: 204, y: 108 },
+  ];
+
+  return (
+    <IllustrationShell
+      title="Judgment upstream of an abundant feature factory"
+      {...props}
+    >
+      <line x1={judgment.x} y1={judgment.y} x2={discovery[0].x} y2={discovery[0].y} />
+      <line x1={judgment.x} y1={judgment.y} x2={discovery[1].x} y2={discovery[1].y} />
+      <Node cx={judgment.x} cy={judgment.y} r={NRF} filled />
+      {discovery.map((node) => (
+        <Node key={`d-${node.y}`} cx={node.x} cy={node.y} />
+      ))}
+
+      <line
+        x1={96}
+        y1={80}
+        x2={124}
+        y2={80}
+        opacity={MUTED}
+        strokeWidth={SWQ}
+      />
+      <ArrowHead x={124} y={80} angleDeg={0} size={4.5} />
+
+      {factory.map((box) => (
+        <rect
+          key={`f-${box.x}-${box.y}`}
+          x={box.x - RHD}
+          y={box.y - RHD}
+          width={RHD * 2}
+          height={RHD * 2}
+          rx={R}
+          fill="var(--background)"
+          opacity={MUTED + 0.25}
+        />
+      ))}
+    </IllustrationShell>
+  );
+}
+
+/**
+ * 10 — Automated steps run up to a boundary; one decision stays human.
+ * Insight: some work can continue, and one choice cannot be handed off.
+ */
+export function HumansStillDecideIllustration(props: IllustrationProps) {
+  const steps = [
+    { x: 32, y: 78 },
+    { x: 60, y: 78 },
+    { x: 88, y: 78 },
+    { x: 116, y: 78 },
+  ];
+  const gateX = 148;
+  const decision = { x: 196, y: 78 };
+
+  return (
+    <IllustrationShell
+      title="Automated steps stop at the decision that stays human"
+      {...props}
+    >
+      {steps.slice(0, -1).map((step, index) => (
+        <line
+          key={`step-${index}`}
+          x1={step.x}
+          y1={step.y}
+          x2={steps[index + 1].x}
+          y2={steps[index + 1].y}
+        />
+      ))}
+      {steps.map((step) => (
+        <Node key={`sn-${step.x}`} cx={step.x} cy={step.y} />
+      ))}
+
+      <line
+        x1={gateX}
+        y1={36}
+        x2={gateX}
+        y2={124}
+        strokeDasharray="2 4"
+        opacity={MUTED}
+        strokeWidth={SWQ}
+      />
+      <Node cx={decision.x} cy={decision.y} r={NRF} filled />
+      <DiagramLabel x={decision.x} y={LBASE}>
+        Decide
+      </DiagramLabel>
+    </IllustrationShell>
+  );
+}
+
 export const essayIllustrationsBySlug = {
   "the-art-of-explaining-tradeoffs": ExplainingTradeoffsIllustration,
   "the-iron-triangle-still-wins": IronTriangleIllustration,
@@ -612,6 +862,12 @@ export const essayIllustrationsBySlug = {
   "the-product-operating-model-actually-works":
     ProductOperatingModelIllustration,
   "when-safe-stops-scaling": SafeStopsScalingIllustration,
+  "when-building-gets-cheap-choosing-gets-expensive":
+    BuildingGetsCheapIllustration,
+  "more-code-is-not-more-progress": MoreCodeIsNotProgressIllustration,
+  "the-product-manager-after-the-factory":
+    ProductManagerAfterFactoryIllustration,
+  "what-should-humans-still-decide": HumansStillDecideIllustration,
   "ai-doesnt-eliminate-tradeoffs": AiDoesntEliminateTradeoffsIllustration,
 } as const;
 
@@ -654,6 +910,26 @@ export const essayIllustrationEntries: ReadonlyArray<{
     slug: "when-safe-stops-scaling",
     title: "When SAFe Stops Scaling",
     concept: "Dependency density and overhead",
+  },
+  {
+    slug: "when-building-gets-cheap-choosing-gets-expensive",
+    title: "When Building Gets Cheap, Choosing Gets Expensive",
+    concept: "Cheap output versus a costly choice",
+  },
+  {
+    slug: "more-code-is-not-more-progress",
+    title: "More Code Is Not More Progress",
+    concept: "Volume of output versus arrival",
+  },
+  {
+    slug: "the-product-manager-after-the-factory",
+    title: "The Product Manager After the Factory",
+    concept: "Judgment upstream of abundant features",
+  },
+  {
+    slug: "what-should-humans-still-decide",
+    title: "What Should Humans Still Decide?",
+    concept: "The decision that stays human",
   },
   {
     slug: "ai-doesnt-eliminate-tradeoffs",
