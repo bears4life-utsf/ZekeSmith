@@ -61,8 +61,8 @@ export const articles: Article[] = [
     category: "Organizational Design",
     description:
       "How coordination gradually became more expensive than the value it created.",
-    readingTime: "10 min",
-    status: "draft",
+    readingTime: "13 min",
+    status: "published",
     featured: false,
     relatedEssaySlugs: [
       "why-more-people-often-slow-delivery",
