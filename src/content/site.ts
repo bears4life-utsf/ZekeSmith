@@ -54,9 +54,9 @@ export const site = {
   writing: {
     eyebrow: "Writing",
     headline:
-      "Essays about the decisions that shape software organizations.",
+      "Essays about the decisions that shape how software gets built — and what I’ve learned from making them.",
     intro:
-      "Thoughts on product leadership, organizational systems, artificial intelligence, and the tradeoffs behind building great software.",
+      "Each essay follows a decision far enough to see what it protects, what it gives up, and who has to live with the result.",
   },
   projects: {
     eyebrow: "Building",
