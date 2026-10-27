@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { articles } from "@/content/articles";
+import { getPublishedArticles } from "@/content/articles";
 import { site } from "@/content/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
-    ...articles.map((article) => ({
+    ...getPublishedArticles().map((article) => ({
       url: `${site.url}/writing/${article.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,

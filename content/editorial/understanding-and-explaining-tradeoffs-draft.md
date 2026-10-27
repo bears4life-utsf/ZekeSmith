@@ -1,6 +1,7 @@
-# The Art of Explaining Tradeoffs
+# Understanding and Explaining Tradeoffs
 
-**Status:** Draft 1 · not published  
+**Status:** Published  
+
 **Traces to:** Manifesto → Tradeoffs; Principles 2, 4, 5, 6, and 7  
 **Source:** `content/editorial/thoughts.md` (philosophy and tradeoffs interviews)  
 **Public rule:** the moves and the line are in. Names, accounts, and live deals are out.

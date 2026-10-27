@@ -856,7 +856,7 @@ export function HumansStillDecideIllustration(props: IllustrationProps) {
 }
 
 export const essayIllustrationsBySlug = {
-  "the-art-of-explaining-tradeoffs": ExplainingTradeoffsIllustration,
+  "understanding-and-explaining-tradeoffs": ExplainingTradeoffsIllustration,
   "the-iron-triangle-still-wins": IronTriangleIllustration,
   "why-more-people-often-slow-delivery": MorePeopleSlowDeliveryIllustration,
   "the-product-operating-model-actually-works":
@@ -887,8 +887,8 @@ export const essayIllustrationEntries: ReadonlyArray<{
   concept: string;
 }> = [
   {
-    slug: "the-art-of-explaining-tradeoffs",
-    title: "The Art of Explaining Tradeoffs",
+    slug: "understanding-and-explaining-tradeoffs",
+    title: "Understanding and Explaining Tradeoffs",
     concept: "Forces → decision → consequences",
   },
   {

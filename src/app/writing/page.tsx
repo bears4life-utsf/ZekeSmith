@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import { ArticleCard } from "@/components/article-card";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import {
-  featuredArticle,
-  supportingArticles,
-} from "@/content/articles";
+import { getWritingCollectionSections } from "@/content/articles";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -14,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function WritingPage() {
+  const sections = getWritingCollectionSections();
+
   return (
     <>
       <Header />
@@ -37,18 +36,44 @@ export default function WritingPage() {
             </p>
           </header>
 
-          <div className="mt-16 sm:mt-20 lg:mt-24">
-            <ArticleCard article={featuredArticle} variant="featured" />
-          </div>
+          <div className="mt-16 space-y-14 sm:mt-20 sm:space-y-16 lg:mt-24 lg:space-y-20">
+            {sections.map((section, sectionIndex) => {
+              const isFeaturedSection =
+                sectionIndex === 0 && section.articles.length === 1;
+              const useGrid = section.articles.length > 1;
 
-          <div className="mt-14 grid gap-8 sm:mt-16 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:mt-20 lg:gap-x-10 lg:gap-y-12">
-            {supportingArticles.map((article) => (
-              <ArticleCard
-                key={article.slug}
-                article={article}
-                variant="library"
-              />
-            ))}
+              return (
+                <section
+                  key={section.category}
+                  aria-labelledby={`writing-section-${sectionIndex}`}
+                >
+                  <h2
+                    id={`writing-section-${sectionIndex}`}
+                    className="text-xs font-medium uppercase tracking-[0.16em] text-accent"
+                  >
+                    {section.category}
+                  </h2>
+
+                  <div
+                    className={
+                      useGrid
+                        ? "mt-6 grid gap-8 sm:mt-7 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:gap-x-10"
+                        : "mt-6 sm:mt-7"
+                    }
+                  >
+                    {section.articles.map((article) => (
+                      <ArticleCard
+                        key={article.slug}
+                        article={article}
+                        variant={
+                          isFeaturedSection ? "featured" : "library"
+                        }
+                      />
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
           </div>
         </section>
       </main>

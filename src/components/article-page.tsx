@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Article } from "@/content/articles";
+import { isReadableArticle } from "@/content/articles";
 import { ArticleReadingMeta } from "@/components/article-card";
 import { RelatedEssays } from "@/components/continue-exploring";
 
@@ -13,6 +14,9 @@ export function ArticlePage({
   article: Article;
   paragraphs?: string[] | null;
 }) {
+  const readable = isReadableArticle(article);
+  const bodyParagraphs = readable ? paragraphs : null;
+
   return (
     <article className="mx-auto w-full max-w-6xl px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-32">
       <div className="mx-auto max-w-2xl">
@@ -30,8 +34,8 @@ export function ArticlePage({
         </div>
 
         <div className="mt-12 space-y-5 border-t border-border pt-10 text-base leading-[1.75] text-foreground/90">
-          {paragraphs && paragraphs.length > 0 ? (
-            paragraphs.map((paragraph, index) => (
+          {bodyParagraphs && bodyParagraphs.length > 0 ? (
+            bodyParagraphs.map((paragraph, index) => (
               <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
             ))
           ) : (

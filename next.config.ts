@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: "/writing/when-frameworks-become-the-problem",
         permanent: true,
       },
+      {
+        source: "/writing/the-art-of-explaining-tradeoffs",
+        destination: "/writing/understanding-and-explaining-tradeoffs",
+        permanent: true,
+      },
     ];
   },
 };
