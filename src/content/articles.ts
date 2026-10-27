@@ -28,7 +28,7 @@ export const articles: Article[] = [
     description:
       "Why software leaders never escape the tradeoff between scope, speed, and quality.",
     readingTime: "7 min",
-    status: "draft",
+    status: "published",
     featured: true,
     relatedEssaySlugs: [
       "the-art-of-explaining-tradeoffs",

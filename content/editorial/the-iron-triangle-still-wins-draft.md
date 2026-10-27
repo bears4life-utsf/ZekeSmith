@@ -1,6 +1,7 @@
 # The Iron Triangle Still Wins
 
-**Status:** Draft 1 · not published  
+**Status:** Published  
+
 **Traces to:** Manifesto → Tradeoffs; Principle 2  
 **Source:** Iron triangle interview, October 2026  
 **Public rule:** scenes and costs are in. Names, accounts, dollar figures, headcount, and product names are out.  
