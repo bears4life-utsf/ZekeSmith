@@ -1,6 +1,7 @@
 # When Building Gets Cheap, Choosing Gets Expensive
 
-**Status:** Draft 3 — Confidentiality applied · ready to publish when approved  
+**Status:** Published  
+
 **Traces to:** Manifesto → Tradeoffs; AI leadership cluster  
 **Source:** Copilot workplace research + Zeke answers, October 2026  
 **Public rule:** scenes and costs are in. Employee names, account names, product names, live deals, and headcount are out.  

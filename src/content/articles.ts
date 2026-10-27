@@ -121,13 +121,13 @@ export const articles: Article[] = [
     category: "Lead When AI Changes the Economics of Software",
     description:
       "AI makes producing software cheaper and faster, increasing the importance of deciding what is worth building.",
-    readingTime: "8 min",
-    status: "comingSoon",
+    readingTime: "4 min",
+    status: "published",
     writingOrder: 4,
     relatedEssaySlugs: [
-      "ai-doesnt-eliminate-tradeoffs",
       "the-iron-triangle-still-wins",
       "understanding-and-explaining-tradeoffs",
+      "when-frameworks-become-the-problem",
     ],
     placeholderNote:
       "It will look at what happens to product judgment when producing software is no longer the expensive part of the work.",
