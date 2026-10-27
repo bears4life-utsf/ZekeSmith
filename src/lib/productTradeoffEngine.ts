@@ -366,7 +366,7 @@ export const PRESETS: Preset[] = [
       },
     },
     tint: "navy",
-    relatedEssayId: "when-safe-stops-scaling",
+    relatedEssayId: "when-frameworks-become-the-problem",
     inputs: {
       scope: 78,
       deliverySpeed: 30,

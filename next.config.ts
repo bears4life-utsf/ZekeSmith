@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/writing/when-safe-stops-scaling",
+        destination: "/writing/when-frameworks-become-the-problem",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

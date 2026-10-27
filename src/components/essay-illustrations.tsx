@@ -861,7 +861,7 @@ export const essayIllustrationsBySlug = {
   "why-more-people-often-slow-delivery": MorePeopleSlowDeliveryIllustration,
   "the-product-operating-model-actually-works":
     ProductOperatingModelIllustration,
-  "when-safe-stops-scaling": SafeStopsScalingIllustration,
+  "when-frameworks-become-the-problem": SafeStopsScalingIllustration,
   "when-building-gets-cheap-choosing-gets-expensive":
     BuildingGetsCheapIllustration,
   "more-code-is-not-more-progress": MoreCodeIsNotProgressIllustration,
@@ -907,8 +907,8 @@ export const essayIllustrationEntries: ReadonlyArray<{
     concept: "Continuous customer learning loop",
   },
   {
-    slug: "when-safe-stops-scaling",
-    title: "When SAFe Stops Scaling",
+    slug: "when-frameworks-become-the-problem",
+    title: "When Frameworks Become the Problem",
     concept: "Dependency density and overhead",
   },
   {

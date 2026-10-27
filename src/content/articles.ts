@@ -48,7 +48,7 @@ export const articles: Article[] = [
     status: "draft",
     featured: false,
     relatedEssaySlugs: [
-      "when-safe-stops-scaling",
+      "when-frameworks-become-the-problem",
       "the-iron-triangle-still-wins",
       "the-product-operating-model-actually-works",
     ],
@@ -56,8 +56,8 @@ export const articles: Article[] = [
       "It will show how added people can increase coordination cost faster than they increase delivery capacity — especially under unclear ownership.",
   },
   {
-    slug: "when-safe-stops-scaling",
-    title: "When SAFe Stops Scaling",
+    slug: "when-frameworks-become-the-problem",
+    title: "When Frameworks Become the Problem",
     category: "Organizational Design",
     description:
       "How coordination gradually became more expensive than the value it created.",
@@ -82,7 +82,7 @@ export const articles: Article[] = [
     status: "draft",
     featured: false,
     relatedEssaySlugs: [
-      "when-safe-stops-scaling",
+      "when-frameworks-become-the-problem",
       "the-art-of-explaining-tradeoffs",
       "ai-doesnt-eliminate-tradeoffs",
     ],
