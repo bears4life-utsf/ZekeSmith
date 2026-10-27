@@ -106,3 +106,112 @@ Still unresolved
 - "The company owes me nothing" may have stopped me from asking for something I should have negotiated. Not examined.
 - How close is too close with direct reports, day to day.
 - What I would drop first if the executive load and weekly learning actually collided. 
+
+---
+
+When Building Gets Cheap, Choosing Gets Expensive — Copilot research dump
+(Raw. Captured October 27, 2026 from Outlook / Teams / transcripts / OneDrive / Jira / Confluence, 2024–Oct 2026. Names stay in this file; public essay strips cast.)
+
+Strongest patterns
+- Mar 4, 2026 Teams: Jeff Lewis / Codex concurrent work — ~2,000 Snyk findings, near-full-featured native iOS clone of Xactimate Mobile, 3/6 milestones on JSP→Spring MVC; autonomous runs >4 hours. Production got dramatically cheaper.
+- New bottleneck = specifying and validating. AI Level 3 Jira guidance: solid info, docs, AC, architecture, context. AI-SDLC leaves priority, business need, problem statements, outcomes, constraints, validation, final approval with people.
+- POM Guild: Product identifies/prioritizes worthwhile problems; discovery effort matches risk; stop when evidence says not valuable/usable/feasible.
+- AI estimates seductive/unreliable. Brian LeBaron on repo analysis timelines: treat as random. “AI doesn’t lack confidence in giving an answer.”
+- Prototype speed → pressure before product case complete (photo labeling).
+- Delivery/commercial activity weak proxies for value (Sep 30, 2026 guild: usage/repeat usage/task completion/behavior vs subscriptions/revenue; bundled signup misleading).
+- Leadership shifts to outcomes and scarce attention; Product owns problem pipeline.
+
+Candidate stories
+1. HIGH — AI photo labeling (Jul 2025–Aug 2026, Teams+Jira). Fast prototype; users liked concept but would not personally use generated descriptions. Later work = trust, editing, workflow, compliance, approval, abandonment. Outcomes: acceptance without edits, override rates, abandonment, active usage, support reduction. Faster: generating/demoing. Expensive: trust, workflow fit, controls, adoption. Line: “Some people loved the concept but said the results are not something they would personally use.”
+2. HIGH — Repo scan ≠ decision (Dec 1, 2025, Teams). Darren Knight / Copilot consolidation plan with ranked rules + timelines. Zeke: fascinating but how does it know estimates? Brian: useful things to examine; each needs deep analysis; timelines random. “AI doesn’t lack confidence in giving an answer.”
+3. HIGH — Delay prevented wrong solution (Sep 2, 2026, POM Guild transcript). Jeremy Nicholls resisted start-implementation-within-a-month; continued research, prototype tested, initial concept would not work. Characterized as preventing premature development.
+4. MED-HIGH — AI inventory MVP → second wave production work (Feb–Oct 2026, Jira). Happy-path Elevate MVP, then sad paths/observability/scalability/stability/customer readiness. Deferred production work; not explicit regret.
+5. MED/LOW — Capacity freed then refilled with more output. Evidence of AI throughput initiatives (XWECLMS-9788, XMW-24487, XO-4778, XWECLMS-9621) but NOT the causal “freed capacity → lower-value fill” sequence. Do not force this story without memory evidence.
+
+Related but different topic (save for AI Doesn’t Eliminate Tradeoffs)
+- Codex remediation introduced more Snyk findings → need for guardrails
+- Photo labeling disclaimers / review for accuracy; trust/governance initiatives
+- Engineering concern Product might imply feasibility from repo analysis
+- AI architecture: traceability, audit, sanitize, restrict sensitive inputs
+- AI-SDLC: humans review, remove hallucinations, confirm scope, decide forward
+
+Synthesis line (not a source quote): “The cost was no longer writing the first version. It was proving that the problem mattered, fitting the solution into a real workflow, earning trust, measuring the outcome, and owning what we had just made easy to create.”
+
+Manual gaps still open
+- Photo labeling: mistake vs reasonable MVP that exposed the next problem?
+- Strongest demo → executive/roadmap pressure?
+- Explicit “AI = X% faster, add X% roadmap” capacity assumption?
+- What else was stopped after prototype/test besides Jeremy’s discovery case? What was that unnamed concept?
+- Personal “we can just build it” / “because we can” line in an untranscribed meeting?
+- Customer/sales commitment harder to unwind after a fast demo?
+- PR/Jira/velocity up while outcomes flat?
+
+
+---
+
+When Building Gets Cheap — Copilot follow-up (Oct 27, 2026)
+Locked A–D deepened. Correction on D: XactLink first approach rejected, product eventually succeeded.
+
+Ranking for essay usefulness
+1. D XactLink discovery — cleanest thesis illustration
+2. C XactAI Photo Labeling — customer-side: impressive AI ≠ value
+3. A Jeff Lewis/Codex — opening premise (production economics changed)
+4. B Repo consolidation scan — best quote; cheap analysis ≠ decision; not a build/no-build story
+
+A. Codex (Mar 4–5, 2026) — Dual License Pilot Teams
+Jeff Lewis: Codex desktop made multi-task coding “super easy.” Last few days: ~2,000 high-severity Snyk findings eliminated (acquired PHP app); nearly full-featured native-Swift Xactimate Mobile clone; 3/6 milestones XactAnalysis JSP→Spring MVC. All concurrent between meetings; 4+ hour autonomous runs. Aditi Nayak: “incredible output for just a few days — especially running all three workstreams in parallel.” Complication: first Snyk attempt introduced more findings than it fixed → need guardrails (save deep treatment for sibling essay). Use as premise, not “built the wrong thing.”
+
+Quotes:
+- JL: “In the last few days I've been able to use it to: Eliminate ~2,000 high severity Snyk findings... Create a (nearly) full featured clone of Xactimate mobile... Complete 3 of 6 milestones...”
+- JL: “All of those running at the same time, while I jump back and forth between meetings...”
+- JL: “I've been able to get Codex to run entirely independently for 4+ hours...”
+- AN: “This is incredible output for just a few days — especially running all three workstreams in parallel.”
+
+B. Repo scan (Dec 1–2, 2025) — Estimate Pillar Leadership + Backend-Service-Consolidation-Opportunities.md
+Darren Knight: Copilot consolidation suggestions; “Just take it as interesting. I don't consider this a surefire plan.” Zeke: “It even takes a guess at the amount of time it would take. I'm not sure how it knows all of that...” Brian LeBaron: each item needs deep dive; “I'd treat the timeline numbers as random. AI doesn't lack confidence in giving an answer.” Next day: Engineering owns feasibility; Product should not make implementation decisions from the scan. Use as cheap-analysis anecdote.
+
+C. Photo Labeling — not a mistake; first version exposed harder problem
+Piloted by May 28, 2025; launched Oct 1, 2025; improvement through summer 2026. Real problem: manual photo descriptions tedious. Promise: review/approve instead of blank field. Progressive pilot: only 18.5% labels / 15.7% descriptions accepted as-is overall; some workflows much better. Campaign recap: interest but not reliable enough for “true automation.” Survey: “Picture naming was the worst possible outcome...” (200+ photo report took at least twice as long). Research framing: describing “what is visible, not why the photo matters.” Jira XWECLMS-9765 / XWECLMS-10069: rewrite/bypass/abandon → claim relevance, trust, governance, workflow, adoption. Characterize: “the first version solved the technically easy part and exposed the harder product problem.”
+
+D. XactLink — CORRECTION
+Not “XactLink failed.” Leadership wanted development in ~1 month. Jeremy: “And I was like, no, we're not doing that. Like, I need more time to research.” ~6 months discovery. Prototype tested: “if it was something like this, would that work?” → “And the answer was resoundingly, absolutely not.” Did not abandon the problem; changed course. Then delivered in ~4 months, several pillars, ~8 teams, ~300 issues; customer response positive. Exact failed assumption of first prototype still unknown (contractor ownership may be related to eventual design but not explicitly tied to the rejection — do not claim that link). Jeremy: “We didn't make space for that six months of research.” Payoff: discovery not wasted time before real work; when delivery can move fast, learning what not to build is economically rational.
+
+Gaps still open / leave out
+- Exact failed assumption in first XactLink prototype — unknown; write carefully
+- No clean demo→exec→premature productize chain for A–D
+- No “AI = X% faster, add X% roadmap”
+- Zeke Feb 6 Elevate prep: “so easy and so fast, it's almost hard to demo ha ha” — usable color
+- No second stop-after-prototype case at same evidence standard
+
+
+---
+
+When Building Gets Cheap — Zeke answers (Oct 27, 2026)
+
+1. Thesis in his words:
+When building becomes cheap, more code can be a good thing — but if decisions and strategy are not tight, you produce bad code faster. You implement a bad strategy with more efficiency. The cost of bad decisions is exacerbated. Decision-making becomes more important than ever.
+
+2. Public anonymity / ownership:
+- No employee names.
+- No project names on the page.
+- Photo labeling → “an AI feature to add descriptions to photos.”
+- XactLink → “a cross-platform initiative.”
+- XactLink is not his project and not in his purview; he did supporting work only. Do not speak as if he owned discovery/delivery. Keep it light / observed, or de-emphasize.
+- Prefer scenes he can own: photo labeling (as the AI photo-description feature), repo-scan conversation he was in, Codex as org premise he witnessed.
+
+Revised scene weight for Draft 1:
+1. Opening premise: production got dramatically cheaper (Codex-class output, anonymized).
+2. Pillar: photo-description AI — first version solved the easy part; choosing/trust/adoption became the cost.
+3. Pillar: repo scan / confident AI plan — analysis got cheap; judgment did not (he was in the room).
+4. Light supporting beat only: cross-platform initiative — delay/discovery before build; observed, not claimed as his.
+
+
+---
+
+When Building Gets Cheap — publication confidentiality answers
+1. Coding-agent productivity: SOFTEN option A — keep dramatic parallel output idea; drop specifics (security findings, mobile clone, legacy conversion, multi-hour runs). Pattern: engineer used coding agent to push several substantial workstreams forward at once, between meetings, in a matter of days. (Security-worse-first detail drops with this.)
+
+2. Photo descriptions customer feedback: SOFTEN (how far TBD)
+2b. Photo soften: option A — keep lesson; drop numbers and harsh quotes; keep visible-vs-why diagnosis.
+3. Repo analysis: SOFTEN option B — keep reaction + timelines random / AI doesn’t lack confidence; drop next-day Engineering-owns-feasibility / Product-must-not-implement-from-scan boundary.
+4. Cross-platform initiative: CUT entirely from public essay.
