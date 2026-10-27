@@ -131,42 +131,42 @@ export function ArticleCard({
     );
 
     return (
-      <article className="group rounded-3xl border border-border bg-background-elevated px-7 pb-8 pt-8 transition-[border-color,box-shadow] duration-500 ease-out hover:border-foreground/12 hover:shadow-soft sm:px-9 sm:pb-10 sm:pt-9 lg:px-11 lg:pb-11 lg:pt-10">
+      <article className="group rounded-3xl border border-border bg-background-elevated px-7 pb-7 pt-7 transition-[border-color,box-shadow] duration-500 ease-out hover:border-foreground/12 hover:shadow-soft sm:px-9 sm:pb-8 sm:pt-8 lg:px-11 lg:pb-9 lg:pt-9">
         <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-center lg:gap-x-10 xl:gap-x-12">
           <div className="min-w-0">
             <h2 className="max-w-3xl text-balance font-serif text-[2.1rem] leading-[1.15] tracking-tight text-foreground sm:text-[2.55rem] sm:leading-[1.12] lg:text-[3.1rem] lg:leading-[1.1]">
               <ArticleTitle article={article} className="" />
             </h2>
-            <p className="mt-4 max-w-2xl text-pretty text-base leading-[1.75] text-muted sm:mt-5 sm:text-lg sm:leading-[1.75]">
+            <p className="mt-3 max-w-2xl text-pretty text-base leading-[1.75] text-muted sm:mt-3.5 sm:text-lg sm:leading-[1.75]">
               {article.description}
             </p>
-            <div className="mt-7 hidden sm:mt-8 lg:block">{meta}</div>
+            <div className="mt-5 hidden sm:mt-6 lg:block">{meta}</div>
           </div>
-          <div className="mt-7 sm:mt-8 lg:mt-0 lg:justify-self-end">
+          <div className="mt-5 sm:mt-6 lg:mt-0 lg:justify-self-end">
             <ArticleIllustration slug={article.slug} size="featured" />
           </div>
-          <div className="mt-7 sm:mt-8 lg:hidden">{meta}</div>
+          <div className="mt-5 sm:mt-6 lg:hidden">{meta}</div>
         </div>
       </article>
     );
   }
 
   return (
-    <article className="group flex h-full flex-col rounded-2xl border border-border bg-background-elevated/50 px-6 pb-8 pt-7 transition-[border-color,box-shadow] duration-500 ease-out hover:border-foreground/12 hover:shadow-soft sm:px-7 sm:pb-9 sm:pt-8">
-      <h3 className="min-h-[2.6em] text-balance font-serif text-[1.375rem] leading-[1.25] tracking-tight text-foreground/90 transition-colors duration-500 group-hover:text-foreground sm:min-h-[2.5em] sm:text-[1.5rem] sm:leading-[1.22]">
+    <article className="group flex h-full flex-col rounded-2xl border border-border bg-background-elevated/50 px-6 pb-6 pt-6 transition-[border-color,box-shadow] duration-500 ease-out hover:border-foreground/12 hover:shadow-soft sm:px-7 sm:pb-7 sm:pt-7">
+      <h3 className="text-balance font-serif text-[1.375rem] leading-[1.25] tracking-tight text-foreground/90 transition-colors duration-500 group-hover:text-foreground sm:text-[1.5rem] sm:leading-[1.22]">
         <ArticleTitle
           article={article}
           className="text-inherit"
           clamp
         />
       </h3>
-      <p className="mt-3.5 line-clamp-3 text-pretty text-[0.9375rem] leading-[1.7] text-muted sm:mt-4">
+      <p className="mt-6 line-clamp-3 text-pretty text-[0.9375rem] leading-[1.7] text-muted sm:mt-7">
         {article.description}
       </p>
-      <div className="mt-auto pt-6 sm:pt-7">
+      <div className="mt-auto pt-4 sm:pt-5">
         <ArticleIllustration slug={article.slug} size="library" />
       </div>
-      <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3 sm:mt-7">
+      <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3 sm:mt-5">
         <ArticleReadingMeta article={article} />
         <ReadEssayLink
           article={article}
