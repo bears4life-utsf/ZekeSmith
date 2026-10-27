@@ -54,9 +54,8 @@ export const site = {
   writing: {
     eyebrow: "Writing",
     headline:
-      "Essays about the decisions that shape how software gets built — and what I’ve learned from making them.",
-    intro:
-      "Each essay follows a decision far enough to see what it protects, what it gives up, and who has to live with the result.",
+      "Leading people, building software, and making the tradeoffs that matter.",
+    intro: "Lessons learned from experience, not just frameworks.",
   },
   projects: {
     eyebrow: "Building",
