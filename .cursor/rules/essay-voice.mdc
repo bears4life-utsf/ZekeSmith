@@ -1,0 +1,14 @@
+---
+description: Essay writing voice for Zeke's editorial drafts
+globs: content/editorial/**/*.md
+alwaysApply: false
+---
+
+# Essay voice
+
+- First-person, conversational, and direct.
+- Prefer natural sentences, commas, and periods.
+- Avoid em dashes and excessive hyphenation.
+- Do not sound overly polished or AI-generated.
+- Preserve personality; do not polish it away.
+- Ground claims in real scenes and named costs.

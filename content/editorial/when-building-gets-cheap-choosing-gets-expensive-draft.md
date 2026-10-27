@@ -16,7 +16,7 @@ When building gets cheap, more code can be a good thing.
 
 It can also be a faster way to implement a bad strategy.
 
-That is the part I keep coming back to. Building faster helps when you understand the problem and what “good” looks like. When you do not — when the outcome is vague and “we can build it” is standing in for judgment — cheaper production does not make you wiser. It just lets a weak decision move farther, sooner.
+That is the part I keep coming back to. Building faster helps when you understand the problem and know what you're trying to accomplish. But when the outcome isn't clear and the ability to build something replaces good judgment, moving faster doesn't help. It just lets you make the wrong decision faster.
 
 Decision-making becomes more important, not less.
 
