@@ -189,8 +189,8 @@ export const articles: Article[] = [
     category: "Lead When AI Changes the Economics of Software",
     description:
       "AI removes some constraints but creates others around quality, verification, trust, and accountability.",
-    readingTime: "8 min",
-    status: "comingSoon",
+    readingTime: "3 min",
+    status: "published",
     writingOrder: 5,
     relatedEssaySlugs: [
       "understanding-and-explaining-tradeoffs",

@@ -1,6 +1,7 @@
 # AI Doesn’t Eliminate Tradeoffs
 
-**Status:** Final — Editorially Complete, Pending Publication Clearance  
+**Status:** Published  
+
 
 **Traces to:** Manifesto → Tradeoffs; AI leadership cluster  
 **Source:** Copilot research + strengthen interview, October 2026  
