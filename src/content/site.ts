@@ -1,54 +1,72 @@
 export const site = {
   name: "Zeke S. Smith",
-  title: "Zeke S. Smith — Product tradeoffs, AI, and how software gets built",
+  title:
+    "Zeke S. Smith — Leading people, building software, and making the tradeoffs that matter.",
   description:
-    "After nearly three decades leading software teams, Zeke S. Smith explores the tradeoffs that shape products — and the systems, curiosity, and craft behind building software in an AI era.",
+    "Zeke S. Smith — Leading people, building software, and making the tradeoffs that matter.",
   url: "https://zekesmith.dev",
-  email: "hello@zekesmith.com",
+  email: "zssmith76@gmail.com",
+  linkedIn: "https://www.linkedin.com/in/zekes/",
+  ogImage: "/images/og-default.jpg",
   bigSandLabs: {
     name: "Big Sand Labs",
     url: "https://www.bigsandlabs.com",
   },
   nav: [
-    { label: "Tradeoffs", href: "/#tradeoffs" },
     { label: "Writing", href: "/writing" },
+    { label: "Speaking", href: "/#speaking" },
     { label: "About", href: "/#about" },
+    { label: "Tradeoffs", href: "/#tradeoffs" },
   ],
   hero: {
-    masthead: {
-      name: "Zeke S. Smith",
-      roles: "VP of Product · Builder · Writer",
-    },
-    headline:
-      "Exploring the decisions that shape software organizations.",
+    eyebrow: "VP of Product · Speaker · Writer",
+    headline: "I lead people and build software.",
     supporting:
-      "After nearly three decades leading software teams, I still spend my time thinking about the same questions: How do products succeed? Which tradeoffs matter? And how is AI changing the way software gets built?",
-    credibility:
-      "Product Systems • Leadership Tradeoffs • AI Experiments",
-    exploring: {
-      title: "Questions I'm Exploring",
-      items: [
-        {
-          label: "How do product tradeoffs shape software?",
-          href: "/?scenario=managing-growth#tradeoffs",
-        },
-        {
-          label: "How is AI changing software development?",
-          href: "/writing/ai-doesnt-eliminate-tradeoffs",
-        },
-        {
-          label: "What makes teams effective?",
-          href: "/writing/the-product-operating-model-actually-works",
-        },
-        {
-          label: "Where does curiosity become software?",
-          href: "https://www.bigsandlabs.com",
-        },
-        {
-          label: "Why do some products succeed?",
-          href: "/#about",
-        },
-      ],
+      "Nearly 30 years turning hard tradeoffs into products that work — most recently as VP of Product at Verisk, building for one of the most complex industries there is: insurance claims.",
+    primaryCta: {
+      label: "Read my writing",
+      href: "/writing",
+    },
+    secondaryCta: {
+      label: "Book me to speak",
+      href: "/#speaking",
+    },
+    headshot: {
+      src: "/images/zeke-headshot.jpg",
+      alt: "Professional portrait of Zeke S. Smith",
+    },
+  },
+  latestWriting: {
+    eyebrow: "Latest Writing",
+    title: "Recent essays",
+    allLabel: "All essays",
+    allHref: "/writing",
+  },
+  speaking: {
+    eyebrow: "Speaking",
+    title: "Talks and panels",
+    intro:
+      "I speak on leadership, AI, and how software really gets built — for product leaders and for the insurance and restoration industry.",
+    yearLabel: "2026",
+    talks: [
+      "Verisk Elevate 2026 — New Xactware Innovations",
+      "AdminStrat Claims Conference — Expert AI Panelist",
+      "Paul Davis Conference — Guest Speaker, The Future of AI",
+      "Paul Davis Conference — Expert AI Panelist",
+      "The CRDN Conference — Guest Speaker, AI and the Future of Claims",
+      "PLRB Knowledge Exchange — Guest Speaker, Rules-Driven Estimation",
+      "The PuroClean Conference — Guest Speaker",
+    ],
+    topicsLabel: "Topics",
+    topics: [
+      "Leading people through change",
+      "AI and the economics of building",
+      "Product tradeoffs",
+      "AI in claims and restoration",
+    ],
+    cta: {
+      label: "Invite me to speak",
+      href: "mailto:zssmith76@gmail.com?subject=Speaking%20inquiry",
     },
   },
   writing: {
@@ -66,7 +84,7 @@ export const site = {
       "Side projects that keep curiosity honest about what is easy in theory and hard in practice.",
   },
   about: {
-    title: "Why any of this matters",
+    title: "About",
     pullQuote:
       "Software is increasingly about systems, human behavior, and the quiet constraints that decide whether something succeeds.",
     paragraphs: [
@@ -81,5 +99,11 @@ export const site = {
         "Big Sand Labs is home to the experiments, tools, and products that grow out of that curiosity.",
       ctaLabel: "Explore Big Sand Labs",
     },
+  },
+  tradeoffs: {
+    leadIn: "Want to see how I think? Try the model.",
+  },
+  footer: {
+    tagline: "Building products. Exploring AI. Thinking in systems.",
   },
 } as const;

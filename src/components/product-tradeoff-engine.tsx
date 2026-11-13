@@ -160,8 +160,8 @@ export function ProductTradeoffEngine() {
       aria-labelledby="tradeoffs-heading"
       className="relative scroll-mt-24"
     >
-      <div className="border-b border-t border-border bg-[color-mix(in_srgb,var(--background-elevated)_62%,var(--background))]">
-        <div className="mx-auto w-full max-w-6xl px-5 pb-10 pt-10 sm:px-8 sm:pb-12 sm:pt-12 lg:pb-14 lg:pt-14">
+      <div className="border-b border-border bg-[color-mix(in_srgb,var(--background-elevated)_62%,var(--background))]">
+        <div className="mx-auto w-full max-w-6xl px-5 pb-10 pt-8 sm:px-8 sm:pb-12 sm:pt-10 lg:pb-14 lg:pt-12">
           <motion.div
             initial={enableMotion ? { opacity: 1, y: 12 } : false}
             whileInView={enableMotion ? { opacity: 1, y: 0 } : undefined}

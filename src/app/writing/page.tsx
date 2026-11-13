@@ -8,6 +8,30 @@ import { site } from "@/content/site";
 export const metadata: Metadata = {
   title: "Writing",
   description: site.writing.intro,
+  alternates: {
+    canonical: "/writing",
+  },
+  openGraph: {
+    type: "website",
+    url: "/writing",
+    title: `Writing · ${site.name}`,
+    description: site.writing.intro,
+    siteName: site.name,
+    images: [
+      {
+        url: site.ogImage,
+        width: 1200,
+        height: 627,
+        alt: site.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Writing · ${site.name}`,
+    description: site.writing.intro,
+    images: [site.ogImage],
+  },
 };
 
 export default function WritingPage() {

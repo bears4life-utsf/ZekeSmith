@@ -3,7 +3,12 @@ import { notFound } from "next/navigation";
 import { ArticlePage } from "@/components/article-page";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { articles, getArticleBySlug } from "@/content/articles";
+import {
+  articleHref,
+  articles,
+  getArticleBySlug,
+} from "@/content/articles";
+import { site } from "@/content/site";
 import { getEssayParagraphs } from "@/lib/essay";
 
 type WritingArticlePageProps = {
@@ -23,9 +28,35 @@ export async function generateMetadata({
     return { title: "Essay" };
   }
 
+  const path = articleHref(article.slug);
+
   return {
     title: article.title,
     description: article.description,
+    alternates: {
+      canonical: path,
+    },
+    openGraph: {
+      type: "article",
+      url: path,
+      title: article.title,
+      description: article.description,
+      siteName: site.name,
+      images: [
+        {
+          url: site.ogImage,
+          width: 1200,
+          height: 627,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.description,
+      images: [site.ogImage],
+    },
   };
 }
 

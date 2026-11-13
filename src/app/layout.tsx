@@ -36,19 +36,32 @@ export const metadata: Metadata = {
     "software",
     "UX",
     "product strategy",
+    "speaking",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: site.url,
+    url: "/",
     title: site.title,
     description: site.description,
     siteName: site.name,
+    images: [
+      {
+        url: site.ogImage,
+        width: 1200,
+        height: 627,
+        alt: site.name,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: site.title,
     description: site.description,
+    images: [site.ogImage],
   },
   robots: {
     index: true,

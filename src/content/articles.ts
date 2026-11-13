@@ -254,6 +254,14 @@ export function getPublishedArticles(): Article[] {
   return articles.filter((article) => article.status === "published");
 }
 
+/** Newest published essays first, using writingOrder as the recency signal. */
+export function getLatestPublishedArticles(limit = 3): Article[] {
+  return getPublishedArticles()
+    .filter((article) => article.writingOrder !== null)
+    .sort((a, b) => (b.writingOrder ?? 0) - (a.writingOrder ?? 0))
+    .slice(0, limit);
+}
+
 export function getRelatedArticles(article: Article): Article[] {
   return article.relatedEssaySlugs
     .map((slug) => getArticleBySlug(slug))
