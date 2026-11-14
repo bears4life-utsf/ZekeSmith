@@ -18,6 +18,8 @@ export type Article = {
   relatedEssaySlugs: readonly string[];
   /** Short essay-specific note shown on the placeholder article page. */
   placeholderNote: string;
+  /** Optional essay-specific social share image (1200x627). Falls back to the site default. */
+  ogImage?: string;
 };
 
 export type ContinueExploringItem = {
@@ -186,6 +188,7 @@ export const articles: Article[] = [
   {
     slug: "ai-doesnt-eliminate-tradeoffs",
     title: "AI Doesn’t Eliminate Tradeoffs",
+    ogImage: "/images/og-ai-doesnt-eliminate-tradeoffs.jpg",
     category: "Lead When AI Changes the Economics of Software",
     description:
       "AI removes some constraints but creates others around quality, verification, trust, and accountability.",

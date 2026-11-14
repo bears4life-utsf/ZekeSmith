@@ -29,6 +29,7 @@ export async function generateMetadata({
   }
 
   const path = articleHref(article.slug);
+  const ogImage = article.ogImage ?? site.ogImage;
 
   return {
     title: article.title,
@@ -44,7 +45,7 @@ export async function generateMetadata({
       siteName: site.name,
       images: [
         {
-          url: site.ogImage,
+          url: ogImage,
           width: 1200,
           height: 627,
           alt: article.title,
@@ -55,7 +56,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: article.title,
       description: article.description,
-      images: [site.ogImage],
+      images: [ogImage],
     },
   };
 }
