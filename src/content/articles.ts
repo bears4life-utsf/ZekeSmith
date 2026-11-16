@@ -38,6 +38,7 @@ export const articles: Article[] = [
   {
     slug: "the-iron-triangle-still-wins",
     title: "The Iron Triangle Still Wins",
+    ogImage: "/images/og-the-iron-triangle-still-wins.jpg",
     category: "Understand Constraints",
     description:
       "Why software leaders never escape the tradeoff between scope, speed, and quality.",
@@ -71,6 +72,7 @@ export const articles: Article[] = [
   {
     slug: "when-frameworks-become-the-problem",
     title: "When Frameworks Become the Problem",
+    ogImage: "/images/og-when-frameworks-become-the-problem.jpg",
     category: "Organize People",
     description:
       "How coordination gradually became more expensive than the value it created.",
@@ -104,6 +106,7 @@ export const articles: Article[] = [
   {
     slug: "understanding-and-explaining-tradeoffs",
     title: "Understanding and Explaining Tradeoffs",
+    ogImage: "/images/og-understanding-and-explaining-tradeoffs.jpg",
     category: "Make and Explain Decisions",
     description:
       "Leadership isn’t about finding the perfect answer. It’s about making the tradeoffs clear.",
@@ -120,6 +123,7 @@ export const articles: Article[] = [
   {
     slug: "when-building-gets-cheap-choosing-gets-expensive",
     title: "When Building Gets Cheap, Choosing Gets Expensive",
+    ogImage: "/images/og-when-building-gets-cheap-choosing-gets-expensive.jpg",
     category: "Lead When AI Changes the Economics of Software",
     description:
       "AI makes producing software cheaper and faster, increasing the importance of deciding what is worth building.",

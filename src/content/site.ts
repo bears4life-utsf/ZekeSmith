@@ -7,7 +7,7 @@ export const site = {
   url: "https://zekesmith.dev",
   email: "zssmith76@gmail.com",
   linkedIn: "https://www.linkedin.com/in/zekes/",
-  ogImage: "/images/og-default.jpg",
+  ogImage: "/images/og-default-card.jpg",
   bigSandLabs: {
     name: "Big Sand Labs",
     url: "https://www.bigsandlabs.com",
