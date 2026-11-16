@@ -58,7 +58,7 @@ export function Hero() {
 
             <motion.div
               {...fadeUp(0.24)}
-              className="mt-9 flex flex-wrap items-center gap-3 sm:mt-10 sm:gap-4"
+              className="mt-9 sm:mt-10"
             >
               <Link
                 href={site.hero.primaryCta.href}
@@ -66,12 +66,6 @@ export function Hero() {
               >
                 {site.hero.primaryCta.label}
               </Link>
-              <a
-                href={site.hero.secondaryCta.href}
-                className="inline-flex items-center justify-center rounded-full border border-border bg-background-elevated/70 px-5 py-2.5 text-sm font-medium text-foreground transition-colors duration-300 hover:border-foreground/20 hover:bg-background-elevated focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
-              >
-                {site.hero.secondaryCta.label}
-              </a>
             </motion.div>
           </div>
 

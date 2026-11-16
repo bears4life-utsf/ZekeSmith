@@ -5,7 +5,7 @@ export const site = {
   description:
     "Zeke S. Smith — Leading people, building software, and making the tradeoffs that matter.",
   url: "https://zekesmith.dev",
-  email: "zssmith76@gmail.com",
+  email: "zssmith@gmail.com",
   linkedIn: "https://www.linkedin.com/in/zekes/",
   ogImage: "/images/og-default-card.jpg",
   bigSandLabs: {
@@ -26,10 +26,6 @@ export const site = {
     primaryCta: {
       label: "Read my writing",
       href: "/writing",
-    },
-    secondaryCta: {
-      label: "Book me to speak",
-      href: "/#speaking",
     },
     headshot: {
       src: "/images/zeke-headshot.jpg",
@@ -66,7 +62,7 @@ export const site = {
     ],
     cta: {
       label: "Invite me to speak",
-      href: "mailto:zssmith76@gmail.com?subject=Speaking%20inquiry",
+      href: "mailto:zssmith@gmail.com?subject=Speaking%20inquiry",
     },
   },
   writing: {
